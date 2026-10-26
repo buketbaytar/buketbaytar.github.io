@@ -36,7 +36,7 @@ export default function Experience() {
       skills: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Streamlit', 'Risk Analizi']
     },
     {
-      period: '2023 — 2024',
+      period: null,
       title: 'Aquaflora — E-Ticaret ve Süreç Platformu',
       organization: 'Aquaflora Web Platformu',
       location: 'Antalya, Türkiye',
