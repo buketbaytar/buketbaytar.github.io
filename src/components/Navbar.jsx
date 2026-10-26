@@ -60,7 +60,7 @@ export default function Navbar() {
               B
             </span>
             <span>
-              Buket Baytar<span className="text-red-500 font-extrabold">.</span>
+              Buket Baytar
             </span>
           </a>
 

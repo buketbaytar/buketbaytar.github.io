@@ -43,23 +43,23 @@ export default function Hero() {
               <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-red-500">
                 KİŞİSEL PORTFOLYO
               </p>
-              <h1 style={{ fontFamily: "'Dancing Script', 'Caveat', cursive" }} className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-normal text-slate-900 leading-[1.25]">
+              <h1 className="italic text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
                 Merhaba, Ben{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600 font-extrabold">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600">
                   Buket
                 </span>{' '}
                 👋
               </h1>
-              <p style={{ fontFamily: "'Dancing Script', 'Caveat', cursive" }} className="text-2xl sm:text-3xl text-slate-700 font-semibold tracking-wide">
-                Yönetim Bilişim Sistemleri Öğrencisi <span className="text-red-400">|</span> Veri Analisti Adayı
+              <p className="italic text-lg sm:text-xl text-slate-700 font-semibold">
+                Yönetim Bilişim Sistemleri Öğrencisi <span className="text-red-400 not-italic">|</span> Veri Analisti Adayı
               </p>
             </div>
 
-            {/* Bio text in handwriting style */}
-            <div style={{ fontFamily: "'Dancing Script', 'Caveat', cursive" }} className="text-xl sm:text-2xl text-slate-700 leading-relaxed font-medium space-y-2.5">
+            {/* Bio text in italic style */}
+            <div className="italic text-base sm:text-lg text-slate-600 leading-relaxed font-normal space-y-2.5">
               <p>Akdeniz Üniversitesi'nde Yönetim Bilişim Sistemleri 4. sınıf öğrencisiyim.</p>
               <p>İş süreçleri, karar destek sistemleri ve veriyi anlamlı içgörülere dönüştürme konularına ilgi duyuyorum.</p>
-              <p className="font-bold text-slate-800">Veri Analizi, İş Analizi ve Süreç Geliştirme rollerinde kariyer yapmayı hedefliyorum.</p>
+              <p className="font-medium text-slate-700">Veri Analizi, İş Analizi ve Süreç Geliştirme rollerinde kariyer yapmayı hedefliyorum.</p>
             </div>
 
             {/* Technology Badges */}
