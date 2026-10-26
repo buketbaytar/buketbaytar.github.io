@@ -20,7 +20,7 @@ export default function Experience() {
       skills: ['YBS', 'MS SQL', 'Süreç Modelleme', 'Karar Destek', 'İstatistik']
     },
     {
-      period: '2024 — Günümüz',
+      period: null,
       title: 'Kredi Kartı Dolandırıcılığı Tespiti (ML & Risk Analizi)',
       organization: 'Kredi Kartı Sahtekarlık Analitiği Projesi',
       location: 'Bağımsız Proje',
@@ -88,13 +88,21 @@ export default function Experience() {
                 
                 {/* Meta details (Period & Type) */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-red-700 bg-red-50 px-3 py-1 rounded-full border border-red-100">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{exp.period}</span>
-                  </div>
-                  <span className="text-[11px] font-medium text-slate-500 bg-slate-100/70 px-2.5 py-0.5 rounded-md">
-                    {exp.type}
-                  </span>
+                  {exp.period ? (
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-red-700 bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{exp.period}</span>
+                    </div>
+                  ) : (
+                    <span className="text-[11px] font-medium text-slate-500 bg-slate-100/70 px-2.5 py-0.5 rounded-md">
+                      {exp.type}
+                    </span>
+                  )}
+                  {exp.period && (
+                    <span className="text-[11px] font-medium text-slate-500 bg-slate-100/70 px-2.5 py-0.5 rounded-md">
+                      {exp.type}
+                    </span>
+                  )}
                 </div>
 
                 {/* Role and Organization */}
