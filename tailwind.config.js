@@ -23,6 +23,8 @@ export default {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['"Fira Code"', 'Consolas', 'Monaco', 'monospace'],
+        cursive: ['"Dancing Script"', '"Caveat"', 'cursive', 'sans-serif'],
+        handwriting: ['"Dancing Script"', '"Caveat"', 'cursive', 'sans-serif'],
       },
       boxShadow: {
         'soft-red': '0 10px 30px -10px rgba(239, 68, 68, 0.15)',

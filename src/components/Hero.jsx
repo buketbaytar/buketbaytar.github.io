@@ -43,23 +43,23 @@ export default function Hero() {
               <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-red-500">
                 KİŞİSEL PORTFOLYO
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+              <h1 className="font-cursive text-5xl sm:text-6xl lg:text-7xl font-bold tracking-normal text-slate-900 leading-[1.25]">
                 Merhaba, Ben{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600 font-extrabold">
                   Buket
                 </span>{' '}
                 👋
               </h1>
-              <p className="text-lg sm:text-xl font-semibold text-slate-700">
+              <p className="font-cursive text-2xl sm:text-3xl text-slate-700 font-semibold tracking-wide">
                 Yönetim Bilişim Sistemleri Öğrencisi <span className="text-red-400">|</span> Veri Analisti Adayı
               </p>
             </div>
 
-            {/* Bio text updated as requested */}
-            <div className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal space-y-2.5">
+            {/* Bio text updated as requested in cursive / handwriting font */}
+            <div className="font-cursive text-xl sm:text-2xl text-slate-700 leading-relaxed font-medium space-y-2.5">
               <p>Akdeniz Üniversitesi'nde Yönetim Bilişim Sistemleri 4. sınıf öğrencisiyim.</p>
               <p>İş süreçleri, karar destek sistemleri ve veriyi anlamlı içgörülere dönüştürme konularına ilgi duyuyorum.</p>
-              <p className="font-medium text-slate-700">Veri Analizi, İş Analizi ve Süreç Geliştirme rollerinde kariyer yapmayı hedefliyorum.</p>
+              <p className="font-bold text-slate-800">Veri Analizi, İş Analizi ve Süreç Geliştirme rollerinde kariyer yapmayı hedefliyorum.</p>
             </div>
 
             {/* Technology Badges */}
