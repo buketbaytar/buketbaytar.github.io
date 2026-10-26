@@ -37,26 +37,8 @@ export default function Projects() {
       ],
       tags: ['JavaScript', 'Vite', 'Tailwind CSS', 'Node.js', 'MongoDB', 'UI/UX'],
       githubUrl: 'https://github.com/buketbaytar/aquaflora',
-      featured: false,
+      featured: true,
       badgeText: 'Web & E-Ticaret'
-    },
-    {
-      id: 'powerbi-dashboard',
-      title: 'Kurumsal Karar Destek Paneli',
-      subtitle: 'Power BI & SQL ile İş Zekası ve KPI Analizi',
-      category: 'İş Analitiği & İş Zekası (BI)',
-      icon: <BarChart3 className="w-5 h-5 text-red-500" />,
-      description:
-        'İşletmelerin operasyonel verilerini konsolide ederek satış performansını, stok devir hızını ve kritik KPI göstergelerini görselleştiren interaktif yönetim paneli.',
-      highlights: [
-        'MS SQL veritabanı üzerinden ilişkisel veri ambarı modelleme',
-        'DAX fonksiyonları ile dinamik metrik ve trend hesaplamaları',
-        'Yöneticiler için anlık aksiyon alınabilir analitik raporlar'
-      ],
-      tags: ['Power BI', 'MS SQL', 'DAX', 'Excel', 'İş Analizi'],
-      githubUrl: 'https://github.com/buketbaytar',
-      featured: false,
-      badgeText: 'İş Zekası (BI)'
     }
   ];
 
@@ -74,12 +56,12 @@ export default function Projects() {
             Geliştirdiğim Seçkin Çalışmalar
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Veri bilimi, makine öğrenmesi, iş zekası ve modern web teknolojilerini bir araya getiren projelerim.
+            Veri bilimi, makine öğrenmesi ve modern web teknolojilerini bir araya getiren projelerim.
           </p>
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((proj) => (
             <div
               key={proj.id}
