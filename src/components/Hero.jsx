@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Sparkles, FolderGit2, Database, Code2, LineChart, CheckCircle2 } from 'lucide-react';
+import { Download, Eye, Sparkles, FolderGit2, Database, Code2, LineChart, CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
   const technologies = [
@@ -83,20 +83,30 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Call To Action: CV Download & Projects */}
-            <div className="pt-4 flex flex-wrap items-center gap-3.5">
+            {/* Call To Action: CV Görüntüle, CV İndir & Projeler */}
+            <div className="pt-4 flex flex-wrap items-center gap-3">
               <a
-                href="/Buket_Baytar_CV.pdf"
-                download="Buket_Baytar_CV.pdf"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-500 via-rose-500 to-red-600 hover:from-red-600 hover:to-rose-600 shadow-md shadow-red-200/80 hover:shadow-lg hover:shadow-red-300/70 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+                href="./Buket_Baytar_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-500 via-rose-500 to-red-600 hover:from-red-600 hover:to-rose-600 shadow-md shadow-red-200/80 hover:shadow-lg hover:shadow-red-300/70 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
               >
-                <Download className="w-4 h-4 animate-bounce" />
+                <Eye className="w-4 h-4" />
+                <span>CV Görüntüle</span>
+              </a>
+
+              <a
+                href="./Buket_Baytar_CV.pdf"
+                download="Buket_Baytar_CV.pdf"
+                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-red-700 bg-red-50 hover:bg-red-100/80 border border-red-200/90 shadow-2xs transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <Download className="w-4 h-4" />
                 <span>CV İndir</span>
               </a>
 
               <a
                 href="#projeler"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-700 bg-white hover:bg-red-50 hover:text-red-800 border border-red-200/80 shadow-2xs transition-all duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-700 bg-white hover:bg-red-50 hover:text-red-800 border border-red-200/80 shadow-2xs transition-all duration-200 hover:-translate-y-0.5"
               >
                 <FolderGit2 className="w-4 h-4 text-red-500" />
                 <span>Projeleri İncele</span>
