@@ -39,6 +39,24 @@ export default function Projects() {
       githubUrl: 'https://github.com/buketbaytar/aquaflora',
       featured: true,
       badgeText: 'Web & E-Ticaret'
+    },
+    {
+      id: 'kutuphane-yonetim-sistemi',
+      title: 'Kütüphane Yönetim Sistemi',
+      subtitle: 'Python, SQLite & Google Books API',
+      category: 'Veritabanı & CRUD Mimarisi',
+      icon: <Database className="w-5 h-5 text-red-500" />,
+      description:
+        'Python, SQLite ve Streamlit kullanılarak geliştirilmiş, uçtan uca veri yönetimi sağlayan interaktif kütüphane sistemi.',
+      highlights: [
+        'SQLite veritabanı üzerinde eksiksiz CRUD (Create, Read, Update, Delete) operasyonlarının kurgulanması.',
+        'Google Books API entegrasyonu ile dinamik veri çekme işlemleri.',
+        'Streamlit kullanılarak tasarlanmış fonksiyonel web arayüzü.'
+      ],
+      tags: ['Python', 'SQLite', 'Streamlit', 'Google Books API', 'CRUD', 'Veri Yönetimi'],
+      githubUrl: 'https://github.com/buketbaytar/kutuphane-yonetim-sistemi',
+      featured: true,
+      badgeText: 'Veritabanı & CRUD Mimarisi'
     }
   ];
 
@@ -61,11 +79,14 @@ export default function Projects() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proj) => (
-            <div
+            <a
               key={proj.id}
-              className={`rounded-3xl bg-white border transition-all duration-300 flex flex-col justify-between overflow-hidden relative group hover:-translate-y-1 ${
+              href={proj.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-3xl bg-white border transition-all duration-300 flex flex-col justify-between overflow-hidden relative group hover:-translate-y-1 cursor-pointer ${
                 proj.featured
                   ? 'border-red-300 shadow-lg shadow-red-100/80 ring-2 ring-red-400/20'
                   : 'border-red-100 hover:border-red-300 shadow-sm hover:shadow-xl hover:shadow-red-100/60'
@@ -135,23 +156,20 @@ export default function Projects() {
 
                 {/* Action Link */}
                 <div className="pt-2">
-                  <a
-                    href={proj.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-between w-full px-4 py-2.5 text-xs font-semibold rounded-xl text-red-800 bg-red-50/80 hover:bg-red-100 border border-red-200/80 group-hover:border-red-300 transition-all duration-200"
+                  <div
+                    className="inline-flex items-center justify-between w-full px-4 py-2.5 text-xs font-semibold rounded-xl text-red-800 bg-red-50/80 group-hover:bg-red-100 border border-red-200/80 group-hover:border-red-300 transition-all duration-200"
                   >
                     <span className="inline-flex items-center gap-2">
                       <Github className="w-4 h-4 text-red-600" />
                       GitHub'da İncele
                     </span>
                     <ArrowUpRight className="w-4 h-4 text-red-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
+                  </div>
                 </div>
 
               </div>
 
-            </div>
+            </a>
           ))}
         </div>
 
