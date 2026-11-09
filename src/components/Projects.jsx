@@ -1,8 +1,46 @@
 import React from 'react';
-import { ExternalLink, Github, Sparkles, Database, Layers, ArrowUpRight, ShieldCheck, ShoppingCart, BarChart3 } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, Database, Layers, ArrowUpRight, ShieldCheck, ShoppingCart, BarChart3, Activity, Briefcase } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
+    {
+      id: 'enerji-kestirimci-bakim-otomasyonu',
+      title: 'Enerji İstasyonları Sensör Verileri ile Kural Tabanlı Kestirimci Bakım Otomasyonu',
+      subtitle: 'Data Engineering & Database Administration',
+      category: 'Veri Mühendisliği & Veritabanı Mimarisi',
+      icon: <Activity className="w-5 h-5 text-red-500" />,
+      description:
+        'İstasyon sensör verilerindeki kural ihlallerini PL/pgSQL trigger\'larıyla gerçek zamanlı yakalayan ve bakım iş emirlerini otomatize eden veri mimarisi.',
+      highlights: [
+        'Pandas ETL ile 10.000 satır işlendi, RAM 1.1 MB → ~312 KB; 1.000\'lik batch\'lerle yükleme',
+        'AFTER INSERT Trigger + PL/pgSQL ile 143 anomalinin milisaniyeler içinde tespiti',
+        'sp_bakim_tamamla Stored Procedure\'ü ile ROW_COUNT + COMMIT transaction güvenliği',
+        'COUNT(CASE WHEN...) ile veritabanı içi (in-database) analitik raporlama',
+        'python-dotenv ve .env ile kimlik bilgisi izolasyonu'
+      ],
+      tags: ['PostgreSQL 18', 'PL/pgSQL', 'Triggers', 'Stored Procedures', 'Python', 'SQLAlchemy', 'Pandas', 'Psycopg2'],
+      githubUrl: 'https://github.com/buketbaytar/enerji-kestirimci-bakim-otomasyonu',
+      featured: true,
+      badgeText: 'Veri Mühendisliği & DBA'
+    },
+    {
+      id: 'tbd-genc-antalya-kariyer',
+      title: 'TBD Genç Antalya - Staj & Kariyer Yönetim Platformu',
+      subtitle: 'Türkiye Bilişim Derneği (TBD) Genç Antalya İş Birliği',
+      category: 'Web & Veritabanı Geliştirme (Full-Stack / Backend Focus)',
+      icon: <Briefcase className="w-5 h-5 text-red-500" />,
+      description:
+        'Staj ve iş arayan üniversite öğrencileri ile yeni mezunları şirketlerle buluşturan, başvuru ve ilan süreçlerini tek merkezden yöneten eşleştirme platformu.',
+      highlights: [
+        'Öğrenci, mezun, şirket ve ilan ilişkilerini yöneten PostgreSQL veritabanı şeması',
+        'Adaylar ve şirketler için dinamik başvuru ve ilan takip modülü',
+        'TBD Genç Antalya kurumsal kimliğine uygun responsive arayüz'
+      ],
+      tags: ['Python', 'Flask', 'PostgreSQL', 'Tailwind CSS', 'Jinja2'],
+      githubUrl: null,
+      featured: true,
+      badgeText: 'Web & Veritabanı Geliştirme'
+    },
     {
       id: 'fraud-detection',
       title: 'Kredi Kartı Dolandırıcılığı Tespiti',
@@ -80,13 +118,16 @@ export default function Projects() {
 
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((proj) => (
-            <a
+          {projects.map((proj) => {
+            const CardTag = proj.githubUrl ? 'a' : 'div';
+            const linkProps = proj.githubUrl
+              ? { href: proj.githubUrl, target: '_blank', rel: 'noopener noreferrer' }
+              : {};
+            return (
+            <CardTag
               key={proj.id}
-              href={proj.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-3xl bg-white border transition-all duration-300 flex flex-col justify-between overflow-hidden relative group hover:-translate-y-1 cursor-pointer ${
+              {...linkProps}
+              className={`rounded-3xl bg-white border transition-all duration-300 flex flex-col justify-between overflow-hidden relative group hover:-translate-y-1 ${proj.githubUrl ? 'cursor-pointer' : ''} ${
                 proj.featured
                   ? 'border-red-300 shadow-lg shadow-red-100/80 ring-2 ring-red-400/20'
                   : 'border-red-100 hover:border-red-300 shadow-sm hover:shadow-xl hover:shadow-red-100/60'
@@ -155,6 +196,7 @@ export default function Projects() {
                 </div>
 
                 {/* Action Link */}
+                {proj.githubUrl && (
                 <div className="pt-2">
                   <div
                     className="inline-flex items-center justify-between w-full px-4 py-2.5 text-xs font-semibold rounded-xl text-red-800 bg-red-50/80 group-hover:bg-red-100 border border-red-200/80 group-hover:border-red-300 transition-all duration-200"
@@ -166,11 +208,13 @@ export default function Projects() {
                     <ArrowUpRight className="w-4 h-4 text-red-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
+                )}
 
               </div>
 
-            </a>
-          ))}
+            </CardTag>
+            );
+          })}
         </div>
 
       </div>
